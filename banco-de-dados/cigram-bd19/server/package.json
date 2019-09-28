@@ -1,0 +1,34 @@
+{
+  "name": "cigram-server",
+  "version": "1.0.0",
+  "description": "Backend de um clone do Instagram feito na cadeira de Banco De Dados",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon index.js"
+  },
+  "author": "brunopasseti",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "cookie-session": "^1.3.3",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "express-cors": "0.0.3",
+    "express-fileupload": "^1.1.6-alpha.5",
+    "express-promise-router": "^3.0.3",
+    "express-session": "^1.16.2",
+    "helmet": "^3.15.1",
+    "http-errors": "~1.6.2",
+    "jade": "~1.11.0",
+    "knex": "^0.19.4",
+    "morgan": "^1.9.1",
+    "multer": "^1.4.2",
+    "nodemon": "^1.19.2",
+    "pg": "^7.12.1",
+    "uuid": "^3.3.3"
+  }
+}
