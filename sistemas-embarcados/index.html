@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>Monitoramento de Máquinas Elétricas</title>
+    <style>
+      table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      th, td {
+        padding: 5px;
+        text-align: center;    
+      }
+      </style>
+</head>
+<body>
+   <h2>Monitoramento de Máquinas Elétricas</h2>
+  
+   <table width="400px">
+    <tr>
+      <th>variaveis da maquina</th>
+      <th colspan="5">Densidade</th>
+    </tr>
+    <tr>
+      <th rowspan="2">razao</td>
+      <th colspan = "2"> x </th>
+      <th colspan = "2"> y </th>
+      <th colspan = "2"> z </th>
+        
+    </tr>
+      <td colspan = "2" id="table_x">zzz</td>
+      <td colspan = "2" id="table_y">zzz</td>
+      <td colspan = "2" id="table_z">zzz</td>
+    <tr>
+      <th >media</td>
+      <td colspan = "2" id="media_x">?</td>
+      <td colspan = "2" id="media_y">?</td>
+      <td colspan = "2" id="media_z">?</td>
+    </tr>
+    <tr>
+      <th> desvio padrao</td>
+      <td colspan = "2" id="desvio_x">?</th>
+      <td colspan = "2" id="desvio_y">?</th>
+      <td colspan = "2" id="desvio_z">?</th>
+    </tr>
+     
+
+     </tr>
+   </table>
+   <div></div>
+
+   <!-- The core Firebase JS SDK is always required and must be listed first -->
+   <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+
+   <!-- TODO: Add SDKs for Firebase products that you want to use
+   https://firebase.google.com/docs/web/setup#config-web-app -->
+   <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-database.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyBgU86JsRga_iiKS434hJXsMnRnW45XnXo",
+        authDomain: "teste-f83e2.firebaseapp.com",
+        databaseURL: "https://teste-f83e2.firebaseio.com",
+        projectId: "teste-f83e2",
+        storageBucket: "teste-f83e2.appspot.com",
+        messagingSenderId: "492054886264",
+        appId: "1:492054886264:web:bde095c8aa79f180"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+
+      firebase.database.Reference
+
+      var razao_x_Ref = firebase.database().ref('razao de pico X');
+      var razao_y_Ref = firebase.database().ref('razao de pico Y');
+      var razao_z_Ref = firebase.database().ref('razao de pico Z');
+      var media_x_Ref = firebase.database().ref('media_x');
+      var media_y_Ref = firebase.database().ref('media_y');
+      var media_z_Ref = firebase.database().ref('media_z');
+      var desvio_x_Ref = firebase.database().ref('desvio_x');
+      var desvio_y_Ref = firebase.database().ref('desvio_y');
+      var desvio_z_Ref = firebase.database().ref('desvio_z');
+      var razao_x;
+      var razao_y;
+      var razao_z;
+      var media_x;
+      var media_y;
+      var media_z;
+      var desvio_x;
+      var desvio_y;
+      var desvio_z;
+      razao_x_Ref.on('value', function(snapshot){
+        razao_x = snapshot.val();
+        document.getElementById("table_x").innerHTML = razao_x;})
+      
+      razao_y_Ref.on('value', function(snapshot){
+        razao_y = snapshot.val();
+        document.getElementById("table_y").innerHTML = razao_y;}) 
+      
+      razao_z_Ref.on('value', function(snapshot){
+        razao_z = snapshot.val();
+        document.getElementById("table_z").innerHTML = razao_z;})
+
+      media_x_Ref.on('value', function(snapshot){
+        media_x = snapshot.val();
+        document.getElementById("media_x").innerHTML = media_x;})
+      
+      media_y_Ref.on('value', function(snapshot){
+        media_y = snapshot.val();
+        document.getElementById("media_y").innerHTML = media_y;})
+
+      media_z_Ref.on('value', function(snapshot){
+        media_z = snapshot.val();
+        document.getElementById("media_z").innerHTML = media_z;})
+      
+      desvio_x_Ref.on('value', function(snapshot){
+        desvio_x = snapshot.val();
+        document.getElementById("desvio_x").innerHTML = desvio_x;})
+
+      desvio_y_Ref.on('value', function(snapshot){
+        desvio_y = snapshot.val();
+        document.getElementById("desvio_y").innerHTML = desvio_y;})
+
+      desvio_z_Ref.on('value', function(snapshot){
+        desvio_z = snapshot.val();
+        document.getElementById("desvio_z").innerHTML = desvio_z;})
+
+
+
+
+
+        window.onload = function () {
+
+          var dps = []; // dataPoints
+          var dps1 = [];
+          var dps2 = [];
+          var chart = new CanvasJS.Chart("chartContainer", {
+            animationEnabled: true,
+            title :{
+              text: "razao de picos por data/hora"
+            },
+            axisX: {
+              valueFormatString: "###"
+            },
+            axisY: {
+              title: "razao de picos",
+              includeZero: true
+            },
+            toolTip:{
+              shared: true
+            },      
+            data: [{
+              name: "razao x",
+              type: "spline",
+              showInLegend: true,
+		          dataPoints: dps
+            },
+            {
+              name: "razao y",
+              type: "spline",
+              showInLegend: true,
+		          dataPoints: dps1
+            },
+            {
+              name: "razao z",
+              type: "spline",
+              showInLegend: true,
+		          dataPoints: dps2
+            }
+            ]
+
+          });
+
+          var xVal = 0;
+          var yValx; 
+          var yValy;
+          var yValz;
+          var updateInterval = 100;
+          var dataLength = 20; // number of dataPoints visible at any point
+
+          var updateChart = function (count) {
+
+            count = count || 1;
+
+            for (var j = 0; j < count; j++) {
+              yValx = razao_x ; 
+              yValy = razao_y ;
+              yValz = razao_z ;
+              dps.push({
+                x: xVal,
+                y: yValx
+              });
+              dps1.push({
+                x: xVal,
+                y: yValy
+              });
+              dps2.push({
+                x: xVal,
+                y: yValz
+              });
+              xVal++;
+            }
+
+            if (dps.length > dataLength) {
+              dps.shift();
+              dps1.shift();
+              dps2.shift();
+            }
+
+            chart.render();
+          };
+
+          updateChart(dataLength);
+          setInterval(function(){updateChart()}, updateInterval);
+
+
+          
+
+        }
+
+      
+    </script>
+  <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>  
+  </body>
+</html>
