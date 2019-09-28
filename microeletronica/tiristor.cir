@@ -1,0 +1,19 @@
+.include tiristorinversor.spi
+.include inversor5.spi
+
+x1 20 10 21 30 40 tiristorinversor
+x2 40 21 30 41 inversor5 
+
+v1 20 30 sine(0.9 0.9 0.25G 0 0 0)
+v3 21 30 1.8V
+v5 30 0 0V DC
+v6 10 30 pulse(0 1.8 0ns 1ps 1ps 16ns 32ns)
+
+r1 41 30 100k
+
+.tran 8ps 40ns
+
+.model tp pmos level=54
+.model tn nmos level=54
+
+.end

@@ -1,0 +1,3 @@
+.subckt c1 1 2
+C1 1 2 1u
+.ends c1

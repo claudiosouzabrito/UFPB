@@ -1,0 +1,19 @@
+cc  -o addacc addacc.c -I/usr/include  -L/usr/lib -lPgn -lPat -lMut -lRcn
+addacc.c: In function ‘inttostr’:
+addacc.c:9:16: warning: implicit declaration of function ‘mbkalloc’ [-Wimplicit-function-declaration]
+ str = (char *) mbkalloc (32 * sizeof (char));
+                ^~~~~~~~
+addacc.c:9:7: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+ str = (char *) mbkalloc (32 * sizeof (char));
+       ^
+addacc.c: At top level:
+addacc.c:109:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ main(){
+ ^~~~
+/usr/bin/ld: cannot find -lPgn
+/usr/bin/ld: cannot find -lPat
+/usr/bin/ld: cannot find -lMut
+/usr/bin/ld: cannot find -lRcn
+collect2: error: ld returned 1 exit status
+Makefile.3118:12: recipe for target 'addacc' failed
+make: *** [addacc] Error 1

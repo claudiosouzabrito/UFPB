@@ -1,0 +1,17 @@
+rm -f la_1_genlib la_1_genlib.o la_1_genlib.exe
+cc  -c -g -I/include/alliance  la_1_genlib.c
+cc  -o la_1_genlib la_1_genlib.o -L/lib/alliance -lBvl -lBeh -lBhl -lLog -lMgn -lMlu -lMlo -lRcn -lMpu -lMph -lMut -lm
+/usr/bin/ld: cannot find -lBvl
+/usr/bin/ld: cannot find -lBeh
+/usr/bin/ld: cannot find -lBhl
+/usr/bin/ld: cannot find -lLog
+/usr/bin/ld: cannot find -lMgn
+/usr/bin/ld: cannot find -lMlu
+/usr/bin/ld: cannot find -lMlo
+/usr/bin/ld: cannot find -lRcn
+/usr/bin/ld: cannot find -lMpu
+/usr/bin/ld: cannot find -lMph
+/usr/bin/ld: cannot find -lMut
+collect2: error: ld returned 1 exit status
+Makefile-8375:37: recipe for target 'la_1_genlib' failed
+make: *** [la_1_genlib] Error 1

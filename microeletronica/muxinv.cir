@@ -1,0 +1,16 @@
+.include muxinv.spi
+
+x1 10 11 12 20 30 40 muxinv
+
+v1 11 30 pulse(0v 1.8v 0s 1ps 1ps 4ns 8ns)
+v2 10 30 pulse(0v 1.8v 4ns 1ps 1ps 4ns 8ns)
+v3 12 30 pulse(0v 1.8v 32ns 1ps 1ps 32ns 64ns)
+v4 20 30 1.8V
+v5 30 0 0V DC
+
+.tran 1ps 64ns
+
+.model tp pmos level=54
+.model tn nmos level=54
+
+.end 

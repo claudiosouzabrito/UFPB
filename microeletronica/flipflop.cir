@@ -1,0 +1,17 @@
+.include flipflop.spi
+
+* INTERF clk d q vdd vss
+x1 10 11 40 20 30 flipflop
+
+v4 20 30 1.8V
+v5 30 0 0V DC
+
+v2 11 30 pulse(0 1.8 0ns 4ns 4ns 45ns 70ns)
+v3 10 30 pulse(0 1.8 0ns 1ps 1ps 49ns 100ns)
+
+.tran 0.01ns 400ns
+
+.model tp pmos level=54
+.model tn nmos level=54
+
+.end 

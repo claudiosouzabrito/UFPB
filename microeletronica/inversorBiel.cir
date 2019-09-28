@@ -1,0 +1,13 @@
+.include biel8.spi
+
+v1 20 30 1.8V
+v2 10 30 pulse(0.84v 1.06v 10ns 1ps 1ps 10ns 20ns)
+v3 30 0 dc 0
+
+x1 10 20 30 40 42 44 biel8
+
+.model tp pmos level=54
+.model tn nmos level=54
+
+.tran 0.001ns 30ns
+.end
