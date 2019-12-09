@@ -9,7 +9,7 @@ int acc(int clka, int clk, int a, int acu){
 //    printf("clka = %d, clk = %d\n", clka, clk);
     if(clka == 1 && clk == 0) saida = a;
     else saida = acu;
-    fprintf(fp, "%d%d%d%d_%d\n", clka, clk, a, acu, saida);
+    fprintf(fp, "%d_%d_%d_%d_%d\n", clk, a, acu, saida);
             
     fclose(fp);
     return saida;

@@ -6,7 +6,7 @@ module addac_tb();
   addac DUV(a, b, c, d, e, saida1, saida2);
 
   initial begin
-    $readmemb("../goldenmodel/addac-tb.tv", testvectors);
+    $readmemb("../simulation/modelsim/tabela-addac.tv", testvectors);
     vectornum = 0;
     errors = 0;
     reset = 1;
