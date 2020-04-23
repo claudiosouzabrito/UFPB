@@ -1,0 +1,21 @@
+DraftYear,Round,Pick,Age,GamesPlayed,Completions,Attempts,Yards,Touchdowns,Interceptions,RushAttempts,RushYards,RushTouchdowns,Player,College,Conference,Team,Heisman,Verdict
+2015,1,1,21,27,562,851,7964,65,18,145,284,7,Jameis Winston,Florida St.,Atlantic Coast,TAM,1,1
+2015,3,75,24,37,688,1113,9190,64,27,212,283,4,Garrett Grayson,Colorado St.,Mountain West,NOR,0,0
+2015,3,89,23,47,1187,1838,13600,83,54,132,-804,2,Sean Mannion,Oregon St.,Pac-12,STL,0,0
+2015,4,103,24,37,530,845,8195,62,10,192,338,21,Bryce Petty,Baylor,Big 12,NYJ,0,0
+2015,5,147,22,40,837,1241,9966,75,25,479,1747,30,Brett Hundley,UCLA,Pac-12,GNB,0,0
+2015,7,250,22,44,550,934,5931,27,24,142,-23,6,Trevor Siemian,Northwestern,Big Ten,DEN,0,1
+2014,1,3,22,37,585,891,7598,56,19,195,561,15,Blake Bortles,Central Florida,American Athletic,JAX,0,1
+2014,1,22,21,26,595,863,7820,63,22,345,2169,30,Johnny Manziel,Texas A&M,Southeastern,CLE,1,0
+2014,1,32,21,39,781,1142,9817,72,24,226,170,6,Teddy Bridgewater,Louisville,Atlantic Coast,MIN,0,1
+2014,2,36,23,44,1087,1630,12843,113,24,164,190,5,Derek Carr,Fresno St.,Mountain West,OAK,0,1
+2014,2,62,22,45,1047,1668,13156,118,51,260,-67,8,Jimmy Garoppolo,East. Illinois,FCS,NWE,0,0
+2014,4,120,23,47,693,1248,9003,52,39,495,1359,24,Logan Thomas,Virginia Tech,Atlantic Coast,ARI,0,0
+2014,4,135,24,31,430,757,5690,37,19,167,-319,4,Tom Savage,Pittsburgh,Atlantic Coast,HOU,0,0
+2014,5,164,24,53,686,1026,9019,77,15,119,-50,3,A.J. McCarron,Alabama,Southeastern,CIN,0,0
+2014,6,178,23,30,407,659,5783,35,15,83,-313,0,Zach Mettenberger,LSU,Southeastern,TEN,0,0
+2018,1,1,21,37,606,1055,8872,67,23,631,3974,49,Lamar Jackson,Louisville,Atlantic Coast,CLE,1,1
+2018,1,2,21,30,711,1169,9301,59,26,109,-154,6,Josh Rosen,UCLA,Pac-12,NYG,0,1
+2018,1,9,21,26,523,801,6873,57,21,129,340,7,Sam Darnold,USC,Pac-12,CIN,0,1
+2018,1,12,22,41,894,1415,13267,90,26,220,25,17,Mason Rudolph,Oklahoma St.,Big 12,WAS,0,1
+
