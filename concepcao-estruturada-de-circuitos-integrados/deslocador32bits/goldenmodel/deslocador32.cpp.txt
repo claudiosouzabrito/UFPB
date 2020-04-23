@@ -1,0 +1,10 @@
+#include <iostream>
+#include <fstream> 
+#include <bitset>
+#include <cstdio>
+int main() {
+    std::ofstream saida("saida.tv", std::ios::out);
+    for(long long i = 0; (long long)i < (long long)((long long)1 << (long long)16); i++){
+        saida << std::bitset<32>(i).to_string() << "_" << (std::bitset<32>(i) << 2).to_string() << std::endl;
+    }
+}
