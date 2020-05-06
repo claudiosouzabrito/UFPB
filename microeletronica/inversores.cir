@@ -1,0 +1,17 @@
+*incluindo o inversores
+
+.include inversores.spi
+
+
+x1 10 20 30 40 41 42 inversores
+
+*fontes de tensao
+V1 20 30 1.8V   
+V2 10 30 0V DC
+V3 30 0 DC 0
+
+.model tp pmos level = 54
+.model tn nmos level = 54
+
+.dc v2 0 1.8 0.001
+.end

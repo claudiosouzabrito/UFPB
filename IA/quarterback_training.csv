@@ -1,0 +1,129 @@
+DraftYear,Round,Pick,Age,GamesPlayed,Completions,Attempts,Yards,Touchdowns,Interceptions,RushAttempts,RushYards,RushTouchdowns,Player,College,Conference,Team,Heisman,Verdict
+2013,1,16,23,43,600,897,7741,47,28,298,827,11,EJ Manuel,Florida St.,Atlantic Coast,BUF,0,0
+2013,2,39,22,44,988,1465,11662,98,21,245,342,4,Geno Smith,West Virginia,Big 12,NYJ,0,0
+2013,3,73,23,36,646,1069,7411,63,31,111,-281,3,Mike Glennon,North Carolina St.,Atlantic Coast,TAM,0,0
+2013,4,98,23,47,1001,1562,12327,116,48,132,-113,6,Matt Barkley,USC,Pac-12,PHI,0,0
+2013,4,110,23,47,791,1312,9190,70,28,242,168,5,Ryan Nassib,Syracuse,Atlantic Coast,NYG,0,0
+2013,7,249,23,42,898,1389,9465,51,40,153,-167,9,Sean Renfree,Duke,Atlantic Coast,ATL,0,0
+2012,1,1,23,38,713,1064,9430,82,22,163,957,7,Andrew Luck,Stanford,Pac-12,IND,0,1
+2012,1,2,22,41,800,1192,10366,78,17,528,2254,33,Robert Griffin,Baylor,Big 12,WAS,1,1
+2012,1,8,24,50,484,774,5450,42,21,115,369,5,Ryan Tannehill,Texas A&M,Southeastern,MIA,0,1
+2012,1,22,28,30,767,1103,9260,75,27,39,-150,1,Brandon Weeden,Oklahoma St.,Big 12,CLE,0,0
+2012,2,57,21,25,412,680,5082,33,15,137,221,4,Brock Osweiler,Arizona St.,Pac-12,DEN,0,1
+2012,3,75,23,50,907,1489,11720,109,30,441,1421,23,Russell Wilson,Wisconsin,Big Ten,SEA,0,1
+2012,3,88,23,36,938,1404,10068,67,33,106,-290,4,Nick Foles,Arizona,Pac-12,PHI,0,1
+2012,4,102,24,45,723,1128,9131,66,30,111,-127,1,Kirk Cousins,Michigan St.,Big Ten,WAS,0,1
+2012,6,185,23,49,961,1732,12690,90,47,90,-275,2,Ryan Lindley,San Diego St.,Mountain West,ARI,0,0
+2011,1,1,22,20,191,292,2908,30,7,285,1586,24,Cam Newton,Auburn,Southeastern,CAR,1,1
+2011,1,8,23,40,619,1147,7639,53,35,454,1939,29,Jake Locker,Washington,Pac-12,TEN,0,0
+2011,1,10,21,31,568,933,6822,40,18,221,458,8,Blaine Gabbert,Missouri,Southeastern,JAX,0,0
+2011,1,12,23,35,596,965,6872,49,30,296,833,10,Christian Ponder,Florida St.,Atlantic Coast,MIN,0,1
+2011,2,35,23,50,812,1317,10314,71,30,413,1611,22,Andy Dalton,TCU,Big 12,CIN,0,1
+2011,2,36,23,51,740,1271,10098,82,24,600,4112,59,Colin Kaepernick,Nevada,Mountain West,SFO,0,1
+2011,3,74,23,37,552,955,8385,69,24,135,-141,7,Ryan Mallett,Arkansas,Southeastern,NWE,0,0
+2011,5,152,24,45,795,1277,9377,58,46,220,-333,7,T.J. Yates,North Carolina,Atlantic Coast,HOU,0,0
+2011,6,180,22,50,495,865,7017,44,20,501,2196,23,Tyrod Taylor,Virginia Tech,Atlantic Coast,BAL,0,1
+2011,7,208,23,35,436,658,5691,39,10,114,71,2,Greg McElroy,Alabama,Southeastern,NYJ,0,0
+2010,1,1,22,31,604,893,8403,88,16,77,36,5,Sam Bradford,Oklahoma,Big 12,STL,1,1
+2010,1,25,23,55,661,995,9285,88,16,692,2947,57,Tim Tebow,Florida,Southeastern,DEN,1,0
+2010,2,48,23,35,695,1110,8148,60,27,175,-355,5,Jimmy Clausen,Notre Dame,Independent,CAR,0,0
+2010,3,85,24,54,1157,1645,13253,112,45,447,1571,20,Colt McCoy,Texas,Big 12,CLE,0,0
+2010,4,122,23,30,408,637,4265,19,20,268,887,11,Mike Kafka,Northwestern,Big Ten,PHI,0,0
+2010,5,155,22,43,802,1363,9923,69,36,296,1216,14,John Skelton,Fordham,FCS,ARI,0,0
+2010,6,176,23,45,768,1361,10112,76,36,115,-335,5,Rusty Smith,Florida Atlantic,Conference USA,TEN,0,0
+2010,6,204,24,27,421,682,5018,49,20,94,128,3,Tony Pike,Central Michigan,Mid-American,CAR,0,0
+2010,7,209,23,23,522,830,6284,38,12,87,24,1,Levi Brown,Cincinnati,American Athletic,BUF,0,0
+2009,1,1,21,39,564,987,7731,51,33,141,213,6,Matthew Stafford,Georgia,Southeastern,DET,0,1
+2009,1,5,22,27,313,487,3965,41,16,70,33,4,Mark Sanchez,USC,Pac-12,NYJ,0,1
+2009,1,17,21,35,680,1151,8078,44,34,214,343,20,Josh Freeman,Kansas St.,Big 12,TAM,0,0
+2009,2,44,23,49,507,783,6049,56,23,684,4480,47,Pat White,West Virginia,West Virginia,MIA,0,0
+2009,4,101,24,40,45,815,5475,28,13,387,1750,11,Stephen McGee,Texas A&M,Southeastern,DAL,0,0
+2008,1,3,23,43,807,1347,9313,56,37,168,58,11,Matt Ryan,Boston Col.,Atlantic Coast,ATL,0,1
+2008,1,18,23,29,596,942,7057,41,15,153,76,9,Joe Flacco,Delaware,FCS,BAL,0,1
+2008,2,56,23,44,780,1185,10775,71,24,172,44,9,Brian Brohm,Louisville,Atlantic Coast,GNB,0,0
+2008,2,57,23,47,828,1387,9715,87,37,180,-315,3,Chad Henne,Michigan,Big Ten,MIA,0,1
+2008,3,94,23,39,664,1151,7689,46,34,395,1312,19,Kevin O'Connell,San Diego St.,Mountain West,NWE,0,0
+2008,5,156,23,40,444,695,5129,38,21,258,1208,12,Dennis Dixon,Oregon,Pac-12,PIT,0,0
+2008,5,160,22,41,724,1065,9699,113,15,307,1864,19,Josh Johnson,San Diego,FCS,TAM,0,0
+2008,7,209,23,41,245,437,3096,31,13,128,340,5,Matt Flynn,LSU,Southeastern,GNB,0,0
+2007,1,22,22,49,929,1602,11762,95,39,254,182,6,Brady Quinn,Notre Dame,Independent,CLE,0,0
+2007,2,36,23,50,964,1565,12964,85,31,472,751,21,Kevin Kolb,Houston,American Athletic,PHI,0,0
+2007,2,40,26,43,885,1418,11021,79,34,267,38,9,John Beck,BYU,FCS,MIA,0,0
+2007,2,43,23,45,543,846,6524,42,28,332,1512,15,Drew Stanton,Michigan St.,Big Ten,DET,0,0
+2007,3,92,23,35,487,865,5429,36,33,226,199,2,Trent Edwards,Stanford,Pac-12,BUF,0,1
+2007,5,174,23,43,420,670,5720,54,13,293,1168,14,Troy Smith,Ohio St.,Big Ten,BAL,1,0
+2007,6,205,23,46,851,1427,11084,88,64,216,-43,7,Jordan Palmer,Texas-El Paso,FCS,WAS,0,0
+2006,1,3,23,37,444,718,6040,44,28,457,3127,37,Vince Young,Texas,Big 12,TEN,0,1
+2006,1,10,23,39,807,1245,10693,99,23,132,-70,9,Matt Leinart,USC,Pac-12,ARI,1,0
+2006,1,11,23,45,710,1242,8697,59,36,453,1256,17,Jay Cutler,Vanderbilt,Southeastern,DEN,0,1
+2006,2,49,23,37,613,1005,755,61,24,273,535,6,Kellen Clemens,Oregon,Pac-12,NYJ,0,1
+2006,2,64,23,44,550,1022,7964,68,29,275,938,11,Tarvaris Jackson,Alabama St.,FCS,MIN,0,1
+2006,3,81,24,44,817,1368,9665,49,46,266,98,10,Charlie Whitehurst,Clemson,Atlantic Coast,SDG,0,0
+2006,3,85,23,39,48,869,6382,41,22,183,-177,4,Brodie Croyle,Alabama,Southeastern,KAN,0,0
+2006,4,103,22,47,18,1454,8644,56,32,779,4193,44,Brad Smith,Missouri,Southeastern,NYJ,0,0
+2006,6,194,23,49,766,1123,9225,85,27,248,1018,14,Bruce Gradkowski,Toledo,Mid-American,TAM,0,0
+2005,1,1,21,25,389,587,5203,47,8,286,1072,15,Alex Smith,Utah,Pac-12,SFO,0,1
+2005,1,24,21,25,424,665,5469,43,13,160,336,8,Aaron Rodgers,California,Pac-12,GNB,0,1
+2005,1,25,23,48,552,854,7299,45,24,249,307,9,Jason Campbell,Auburn,Southeastern,WAS,0,1
+2005,3,67,24,46,913,1436,11049,64,32,375,429,19,Charlie Frye,Akron,Mid-American,CLE,0,0
+2005,3,69,23,48,777,1416,10617,85,36,175,-475,0,Andrew Walter,Arizona St.,Pac-12,OAK,0,0
+2005,4,106,22,44,786,1336,9337,63,28,271,316,6,Kyle Orton,Purdue,Big Ten,CHI,0,1
+2005,5,145,22,46,916,1567,10706,84,51,143,-285,6,Dan Orlovsky,Connecticut,FCS,DET,0,0
+2005,6,213,22,49,768,1515,11249,79,57,182,-533,8,Derek Anderson,Oregon St.,Pac-12,BAL,0,1
+2005,7,250,22,25,384,641,5234,39,21,365,1487,16,Ryan Fitzpatrick,Harvard,FCS,STL,0,1
+2004,1,4,22,47,1087,1710,13484,95,34,252,96,17,Philip Rivers,North Carolina St.,Atlantic Coast,NYG,0,1
+2004,1,11,22,38,854,1304,10829,84,34,269,246,7,Ben Roethlisberger,Miami (OH),Mid-American,PIT,0,1
+2004,1,22,23,38,570,987,6754,60,27,237,241,10,J.P. Losman,Tulane,American Athletic,BUF,0,0
+2004,3,90,23,40,716,1069,7502,56,26,132,58,5,Matt Schaub,Virginia,Atlantic Coast,ATL,0,1
+2004,4,106,23,43,1063,1775,1266,87,62,274,65,10,Luke McCown,Louisiana Tech,Conference USA,CLE,0,0
+2004,5,148,23,33,328,577,4489,28,21,247,600,6,Craig Krenzel,Ohio St.,Big Ten,CHI,0,0
+2004,6,193,23,39,288,519,4498,33,21,138,-32,4,Jim Sorgi,Wisconsin,Big Ten,IND,0,0
+2004,7,202,24,46,744,1327,9014,70,30,144,-241,2,John Navarre,Michigan,Big Ten,ARI,0,0
+2004,7,217,24,38,792,1373,9916,53,42,249,-186,11,Cody Pickett,Washington,Pac-12,SFO,0,0
+2004,7,225,25,23,310,529,3831,37,18,149,345,5,Matt Mauck,LSU,Southeastern,DEN,0,0
+2004,7,250,24,38,424,778,6165,37,30,420,2274,25,Bradlee Van Pelt,Colorado St.,Mountain West,DEN,0,0
+2003,1,1,23,53,927,1569,11818,72,49,255,-197,9,Carson Palmer,USC,Pac-12,CIN,1,1
+2003,1,7,23,61,939,1442,11903,89,28,190,181,6,Byron Leftwich,Marshall,Conference USA,JAX,0,1
+2003,1,19,22,43,622,1301,7980,64,48,275,-169,6,Kyle Boller,California,Pac-12,BAL,0,1
+2003,1,22,23,35,677,1110,9164,77,36,119,-133,6,Rex Grossman,Florida,Southeastern,CHI,0,1
+2003,3,88,23,41,685,1180,8564,74,29,326,577,9,Dave Ragone,Louisville,Atlantic Coast,HOU,0,0
+2003,3,97,23,41,535,911,7097,58,31,159,-137,10,Chris Simms,Texas,Big 12,TAM,0,0
+2003,4,110,23,25,411,712,5289,26,27,237,912,15,Seneca Wallace,Iowa St.,Big 12,SEA,0,0
+2003,5,163,23,44,457,803,5837,48,32,172,419,2,Brian St. Pierre,Boston Col.,Atlantic Coast,PIT,0,0
+2003,6,192,23,24,196,351,2631,22,7,60,74,4,Drew Henson,Michigan,Big Ten,HOU,0,0
+2003,7,241,22,41,668,1153,9565,86,28,59,-79,2,Ken Dorsey,Miami (FL),Atlantic Coast,SFO,0,0
+2002,1,1,23,36,565,901,7458,65,22,177,95,9,David Carr,Fresno St.,Mountain West,HOU,0,1
+2002,1,3,23,34,512,928,6911,59,23,145,210,18,Joey Harrington,Oregon,Pac-12,DET,0,1
+2002,1,32,23,35,798,1355,9205,72,51,152,-128,4,Patrick Ramsey,Tulane,American Athletic,WAS,0,1
+2002,3,81,23,30,340,664,4022,27,34,198,201,4,Josh McCown,SMU,American Athletic,ARI,0,1
+2002,4,108,24,44,666,1169,9029,60,39,516,1209,21,David Garrard,East Carolina,American Athletic,JAX,0,1
+2002,4,117,24,25,286,478,4415,29,15,66,77,0,Rohan Davey,LSU,Southeastern,NWE,0,0
+2002,5,137,24,36,188,369,2973,25,11,127,317,6,Randy Fasani,Stanford,Pac-12,CAR,0,0
+2002,5,158,22,42,668,1229,8460,66,33,192,168,7,Kurt Kittner,Illinois,Big Ten,ATL,0,0
+2001,2,53,23,29,483,853,6447,35,25,251,606,11,Quincy Carter,Georgia,Southeastern,DAL,0,1
+2001,2,59,22,42,418,761,5501,31,28,346,1374,20,Marques Tuiasosopo,Washington,Pac-12,OAK,0,0
+2001,4,106,29,36,650,1107,9839,79,32,110,-366,2,Chris Weinke,Florida St.,Atlantic Coast,CAR,1,0
+2001,4,125,22,27,254,479,3755,31,17,67,-124,6,Jesse Palmer,Florida,Southeastern,NYG,0,0
+2001,5,149,22,34,482,974,6608,41,52,214,185,8,Mike McMahon,Rutgers,Big Ten,DET,0,0
+2001,5,155,24,22,149,282,2175,15,6,37,0,1,A.J. Feeley,Oregon,Pac-12,PHI,0,0
+2000,1,18,24,38,848,1334,11446,107,30,168,61,4,Chad Pennington,Marshall,Conference USA,NYJ,0,1
+2000,3,75,23,43,1031,1679,12541,84,51,167,-412,3,Chris Redman,Louisville,Atlantic Coast,BAL,0,0
+2000,5,163,22,38,326,588,4592,32,16,204,614,16,Tee Martin,Tennessee,Southeastern,PIT,0,0
+2000,6,168,23,38,630,1023,8153,59,34,107,-326,2,Marc Bulger,West Virginia,Big 12,NOR,0,1
+2000,6,183,22,24,334,606,3497,24,19,94,-49,3,Spergon Wynn,Southwest Texas St.,FCS,CLE,0,0
+2000,6,199,23,29,395,638,4773,30,17,90,-150,3,Tom Brady,Michigan,Big Ten,NWE,0,1
+2000,6,202,22,36,465,872,6564,41,24,99,-136,3,Todd Husak,Stanford,Pac-12,WAS,0,0
+2000,7,212,23,33,1015,1552,12746,115,35,153,-103,2,Tim Rattay,Louisiana Tech,Conference USA,SFO,0,0
+2000,7,214,23,36,306,536,4820,34,21,272,957,13,Jarious Jackson,Notre Dame,Independent,DEN,0,0
+2000,7,234,23,43,629,1020,8882,65,39,501,1758,18,Joe Hamilton,Georgia Tech,Atlantic Coast,TAM,0,0
+1999,1,1,22,29,795,1184,8435,74,35,154,-275,4,Tim Couch,Kentucky,Southeastern,CLE,0,1
+1999,1,11,22,33,721,1097,9341,72,32,371,1003,19,Daunte Culpepper,UCF,American Athletic,MIN,0,1
+1999,1,12,22,47,694,1250,10708,68,41,313,577,16,Cade McNown,UCLA,Pac-12,CHI,0,0
+1999,2,50,22,42,669,1201,8695,72,34,369,1158,20,Shaun King,Tulane,American Athletic,TAM,0,1
+1999,3,77,23,30,422,776,5742,51,27,114,-39,3,Brock Huard,Washington,Pac-12,SEA,0,0
+1999,4,101,24,37,439,741,6370,56,20,111,-276,0,Joe Germaine,Ohio St.,Big Ten,STL,0,0
+1999,4,131,23,34,357,651,5118,33,24,199,547,14,Aaron Brooks,Virginia,Atlantic Coast,GNB,0,1
+1999,7,227,23,23,244,480,4401,36,13,324,1314,23,Michael Bishop,Kansas St.,Big 12,NWE,0,0
+1999,7,245,23,35,281,497,3862,26,15,80,-245,2,Scott Covington,Miami (FL),Atlantic Coast,CIN,0,0
+1998,1,1,22,45,863,1381,11201,89,33,153,-181,12,Peyton Manning,Tennessee,Southeastern,IND,0,1
+1998,1,2,22,32,473,880,7433,59,24,173,-171,14,Ryan Leaf,Washington St.,Pac-12,SDG,0,0

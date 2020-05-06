@@ -1,0 +1,131 @@
+#! /usr/bin/vvp
+:ivl_version "10.1 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+:vpi_module "v2009";
+S_0x5572b66bf5f0 .scope module, "somador4" "somador4" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "a"
+    .port_info 1 /INPUT 4 "b"
+    .port_info 2 /INPUT 1 "cin"
+    .port_info 3 /OUTPUT 1 "cout"
+    .port_info 4 /OUTPUT 4 "s"
+o0x7f0ee33f3a08 .functor BUFZ 4, C4<zzzz>; HiZ drive
+v0x5572b66e5260_0 .net "a", 3 0, o0x7f0ee33f3a08;  0 drivers
+o0x7f0ee33f3a38 .functor BUFZ 4, C4<zzzz>; HiZ drive
+v0x5572b66e5360_0 .net "b", 3 0, o0x7f0ee33f3a38;  0 drivers
+o0x7f0ee33f3108 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5572b66e5440_0 .net "cin", 0 0, o0x7f0ee33f3108;  0 drivers
+v0x5572b66e5570_0 .var "cout", 0 0;
+v0x5572b66e5610_0 .net "cout1", 0 0, L_0x5572b66e5c70;  1 drivers
+v0x5572b66e56b0_0 .net "cout2", 0 0, L_0x5572b66e63a0;  1 drivers
+v0x5572b66e5780_0 .net "cout3", 0 0, L_0x5572b66e6bf0;  1 drivers
+v0x5572b66e5850_0 .net "cout4", 0 0, L_0x5572b66e7330;  1 drivers
+v0x5572b66e5920_0 .net "s", 3 0, L_0x5572b66e7a90;  1 drivers
+L_0x5572b66e6030 .part o0x7f0ee33f3a08, 0, 1;
+L_0x5572b66e6160 .part o0x7f0ee33f3a38, 0, 1;
+L_0x5572b66e6870 .part o0x7f0ee33f3a08, 1, 1;
+L_0x5572b66e6910 .part o0x7f0ee33f3a38, 1, 1;
+L_0x5572b66e6fb0 .part o0x7f0ee33f3a08, 2, 1;
+L_0x5572b66e70e0 .part o0x7f0ee33f3a38, 2, 1;
+L_0x5572b66e76c0 .part o0x7f0ee33f3a08, 3, 1;
+L_0x5572b66e7880 .part o0x7f0ee33f3a38, 3, 1;
+L_0x5572b66e7a90 .concat8 [ 1 1 1 1], L_0x5572b66e5ee0, L_0x5572b66e6720, L_0x5572b66e6e60, L_0x5572b66e7570;
+S_0x5572b66bcf40 .scope module, "som1" "somador" 2 5, 3 1 0, S_0x5572b66bf5f0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /INPUT 1 "b"
+    .port_info 2 /INPUT 1 "cin"
+    .port_info 3 /OUTPUT 1 "cout"
+    .port_info 4 /OUTPUT 1 "s"
+L_0x5572b66e5ae0 .functor XOR 1, L_0x5572b66e6030, L_0x5572b66e6160, C4<0>, C4<0>;
+L_0x5572b66e5bd0 .functor XOR 1, L_0x5572b66e6030, L_0x5572b66e6160, C4<0>, C4<0>;
+L_0x5572b66e5c70 .functor XOR 1, L_0x5572b66e5bd0, o0x7f0ee33f3108, C4<0>, C4<0>;
+L_0x5572b66e5d80 .functor AND 1, L_0x5572b66e6030, L_0x5572b66e6160, C4<1>, C4<1>;
+L_0x5572b66e5e20 .functor AND 1, L_0x5572b66e5ae0, o0x7f0ee33f3108, C4<1>, C4<1>;
+L_0x5572b66e5ee0 .functor OR 1, L_0x5572b66e5d80, L_0x5572b66e5e20, C4<0>, C4<0>;
+v0x5572b66c4580_0 .net *"_s2", 0 0, L_0x5572b66e5bd0;  1 drivers
+v0x5572b66c1fb0_0 .net *"_s6", 0 0, L_0x5572b66e5d80;  1 drivers
+v0x5572b66bf9e0_0 .net *"_s8", 0 0, L_0x5572b66e5e20;  1 drivers
+v0x5572b66bd3b0_0 .net "a", 0 0, L_0x5572b66e6030;  1 drivers
+v0x5572b66e2f40_0 .net "b", 0 0, L_0x5572b66e6160;  1 drivers
+v0x5572b66e3050_0 .net "cin", 0 0, o0x7f0ee33f3108;  alias, 0 drivers
+v0x5572b66e3110_0 .net "cout", 0 0, L_0x5572b66e5ee0;  1 drivers
+v0x5572b66e31d0_0 .net "p", 0 0, L_0x5572b66e5ae0;  1 drivers
+v0x5572b66e3290_0 .net "s", 0 0, L_0x5572b66e5c70;  alias, 1 drivers
+S_0x5572b66e33f0 .scope module, "som2" "somador" 2 6, 3 1 0, S_0x5572b66bf5f0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /INPUT 1 "b"
+    .port_info 2 /INPUT 1 "cin"
+    .port_info 3 /OUTPUT 1 "cout"
+    .port_info 4 /OUTPUT 1 "s"
+L_0x5572b66e6290 .functor XOR 1, L_0x5572b66e6870, L_0x5572b66e6910, C4<0>, C4<0>;
+L_0x5572b66e6300 .functor XOR 1, L_0x5572b66e6870, L_0x5572b66e6910, C4<0>, C4<0>;
+L_0x5572b66e63a0 .functor XOR 1, L_0x5572b66e6300, o0x7f0ee33f3108, C4<0>, C4<0>;
+L_0x5572b66e64b0 .functor AND 1, L_0x5572b66e6870, L_0x5572b66e6910, C4<1>, C4<1>;
+L_0x5572b66e6550 .functor AND 1, L_0x5572b66e6290, o0x7f0ee33f3108, C4<1>, C4<1>;
+L_0x5572b66e6720 .functor OR 1, L_0x5572b66e64b0, L_0x5572b66e6550, C4<0>, C4<0>;
+v0x5572b66e3590_0 .net *"_s2", 0 0, L_0x5572b66e6300;  1 drivers
+v0x5572b66e3670_0 .net *"_s6", 0 0, L_0x5572b66e64b0;  1 drivers
+v0x5572b66e3750_0 .net *"_s8", 0 0, L_0x5572b66e6550;  1 drivers
+v0x5572b66e3810_0 .net "a", 0 0, L_0x5572b66e6870;  1 drivers
+v0x5572b66e38d0_0 .net "b", 0 0, L_0x5572b66e6910;  1 drivers
+v0x5572b66e39e0_0 .net "cin", 0 0, o0x7f0ee33f3108;  alias, 0 drivers
+v0x5572b66e3a80_0 .net "cout", 0 0, L_0x5572b66e6720;  1 drivers
+v0x5572b66e3b20_0 .net "p", 0 0, L_0x5572b66e6290;  1 drivers
+v0x5572b66e3be0_0 .net "s", 0 0, L_0x5572b66e63a0;  alias, 1 drivers
+S_0x5572b66e3dd0 .scope module, "som3" "somador" 2 7, 3 1 0, S_0x5572b66bf5f0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /INPUT 1 "b"
+    .port_info 2 /INPUT 1 "cin"
+    .port_info 3 /OUTPUT 1 "cout"
+    .port_info 4 /OUTPUT 1 "s"
+L_0x5572b66e6a70 .functor XOR 1, L_0x5572b66e6fb0, L_0x5572b66e70e0, C4<0>, C4<0>;
+L_0x5572b66e6ae0 .functor XOR 1, L_0x5572b66e6fb0, L_0x5572b66e70e0, C4<0>, C4<0>;
+L_0x5572b66e6bf0 .functor XOR 1, L_0x5572b66e6ae0, o0x7f0ee33f3108, C4<0>, C4<0>;
+L_0x5572b66e6d00 .functor AND 1, L_0x5572b66e6fb0, L_0x5572b66e70e0, C4<1>, C4<1>;
+L_0x5572b66e6da0 .functor AND 1, L_0x5572b66e6a70, o0x7f0ee33f3108, C4<1>, C4<1>;
+L_0x5572b66e6e60 .functor OR 1, L_0x5572b66e6d00, L_0x5572b66e6da0, C4<0>, C4<0>;
+v0x5572b66e3f80_0 .net *"_s2", 0 0, L_0x5572b66e6ae0;  1 drivers
+v0x5572b66e4060_0 .net *"_s6", 0 0, L_0x5572b66e6d00;  1 drivers
+v0x5572b66e4140_0 .net *"_s8", 0 0, L_0x5572b66e6da0;  1 drivers
+v0x5572b66e4230_0 .net "a", 0 0, L_0x5572b66e6fb0;  1 drivers
+v0x5572b66e42f0_0 .net "b", 0 0, L_0x5572b66e70e0;  1 drivers
+v0x5572b66e4400_0 .net "cin", 0 0, o0x7f0ee33f3108;  alias, 0 drivers
+v0x5572b66e44f0_0 .net "cout", 0 0, L_0x5572b66e6e60;  1 drivers
+v0x5572b66e45b0_0 .net "p", 0 0, L_0x5572b66e6a70;  1 drivers
+v0x5572b66e4670_0 .net "s", 0 0, L_0x5572b66e6bf0;  alias, 1 drivers
+S_0x5572b66e4860 .scope module, "som4" "somador" 2 8, 3 1 0, S_0x5572b66bf5f0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /INPUT 1 "b"
+    .port_info 2 /INPUT 1 "cin"
+    .port_info 3 /OUTPUT 1 "cout"
+    .port_info 4 /OUTPUT 1 "s"
+L_0x5572b66e7250 .functor XOR 1, L_0x5572b66e76c0, L_0x5572b66e7880, C4<0>, C4<0>;
+L_0x5572b66e72c0 .functor XOR 1, L_0x5572b66e76c0, L_0x5572b66e7880, C4<0>, C4<0>;
+L_0x5572b66e7330 .functor XOR 1, L_0x5572b66e72c0, o0x7f0ee33f3108, C4<0>, C4<0>;
+L_0x5572b66e7440 .functor AND 1, L_0x5572b66e76c0, L_0x5572b66e7880, C4<1>, C4<1>;
+L_0x5572b66e74b0 .functor AND 1, L_0x5572b66e7250, o0x7f0ee33f3108, C4<1>, C4<1>;
+L_0x5572b66e7570 .functor OR 1, L_0x5572b66e7440, L_0x5572b66e74b0, C4<0>, C4<0>;
+v0x5572b66e49e0_0 .net *"_s2", 0 0, L_0x5572b66e72c0;  1 drivers
+v0x5572b66e4ae0_0 .net *"_s6", 0 0, L_0x5572b66e7440;  1 drivers
+v0x5572b66e4bc0_0 .net *"_s8", 0 0, L_0x5572b66e74b0;  1 drivers
+v0x5572b66e4c80_0 .net "a", 0 0, L_0x5572b66e76c0;  1 drivers
+v0x5572b66e4d40_0 .net "b", 0 0, L_0x5572b66e7880;  1 drivers
+v0x5572b66e4e50_0 .net "cin", 0 0, o0x7f0ee33f3108;  alias, 0 drivers
+v0x5572b66e4ef0_0 .net "cout", 0 0, L_0x5572b66e7570;  1 drivers
+v0x5572b66e4fb0_0 .net "p", 0 0, L_0x5572b66e7250;  1 drivers
+v0x5572b66e5070_0 .net "s", 0 0, L_0x5572b66e7330;  alias, 1 drivers
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "../somador4.sv";
+    "../somador.sv";

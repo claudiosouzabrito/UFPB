@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Cigram</title>
+        <style>
+          table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+          }
+          th, td {
+            padding: 5px;
+            text-align: center;    
+          }
+          </style>
+    </head>
+<body>
+  <h1>Cigram</h1>
+  <table width="400px">
+  <tr>
+    <th rowspan="">Login</td>
+  </tr>
+  <tr>
+    <th rowspan="1">Senha</td>
+  </tr>
+  <tr>
+    <th rowspan="5">Esqueceu a senha?</td>
+  </tr>
+</table>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+<script>
+  axios.get('http://localhost:3333/server/routes/auth/logout')
+    .then(response => console.log(response))
+    .catch(error => console.log(error))
+</script>
+</html>

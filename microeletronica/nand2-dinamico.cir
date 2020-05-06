@@ -1,0 +1,13 @@
+.include nand2.spi
+.model tp pmos level=54
+.model tn nmos level=54
+
+x1 10 11 20 30 40 nand2
+
+v1 10 30 pulse(0 1.8V 4ns 1ps 1ps 4ns 8ns)
+v2 11 30 pulse(0 1.8V 6ns 1ps 1ps 8ns 16ns)
+v3 20 30 1.8dc
+v4 30 0 0V
+
+.tran 0.00001 16ns
+.end

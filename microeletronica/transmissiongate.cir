@@ -1,0 +1,20 @@
+.include transmissiongate.spi
+
+x1 10 11 20 30 40 41 transmissiongate
+
+r1 40 30 100k
+r2 41 30 100k
+
+V1 20 30 1.8V
+V2 11 30 0V DC
+V3 30 0 DC 0V
+V4 10 30 DC 
+
+.model tp pmos level = 54
+.model tn nmos level = 54
+
+.dc V4 0 1.8 0.001
+.end
+
+
+

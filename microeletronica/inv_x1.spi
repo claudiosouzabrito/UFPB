@@ -1,0 +1,27 @@
+* Spice description of inv_x1
+* Spice driver version -2124220920
+* Date ( dd/mm/yyyy hh:mm:ss ): 20/08/2019 at 14:44:08
+
+* INTERF i nq vdd vss 
+
+
+.subckt inv_x1 1 12 8 16 
+* NET 1 = i
+* NET 8 = vdd
+* NET 12 = nq
+* NET 16 = vss
+Mtr_00002 13 4 7 8 tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00001 17 2 11 16 tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+R4_1 3 1 0.001
+R4_2 3 4 600
+C4_21 3 16 1.875e-15
+C4_22 4 16 1.875e-15
+R4_3 2 3 500
+C4_31 2 16 1.5e-15
+C4_32 3 16 1.5e-15
+R3_1 7 8 0.001
+R2_1 11 12 0.001
+R2_2 13 12 0.001
+R1_1 17 16 0.001
+.ends inv_x1
+
