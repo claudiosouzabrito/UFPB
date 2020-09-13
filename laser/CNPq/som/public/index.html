@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>Monitoramento de som</title>
+    <style>
+      table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      th, td {
+        padding: 5px;
+        text-align: center;    
+      }
+      </style>
+</head>
+<body>
+   <h2>Monitoramento de som</h2>
+  
+   <table width="400px">
+    <tr>
+      <th colspan="7">variaveis da maquina</th>
+    </tr>
+    
+    <tr>
+      <th rowspan="2">Valor</td>
+      
+    </tr>
+    <tr>
+      <td colspan = "2" id="valor">?</td>
+    </tr>
+    
+      <th >numero de pico</td>
+      <td colspan = "2" id="numero de pico">?</td>
+      
+    <tr>
+      <th >razao</td>
+      <td colspan = "2" id="razao">?</td>
+    </tr>
+
+    <tr>
+      <th >media</td>
+      <td colspan = "2" id="media">?</td>
+    </tr>
+  
+    <tr>
+      <th >alarme</td>
+      <td colspan = "2" id="alarme">?</td>
+    </tr>
+      
+    
+   </table>
+   <div></div>
+
+   <!-- The core Firebase JS SDK is always required and must be listed first -->
+   <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+
+   <!-- TODO: Add SDKs for Firebase products that you want to use
+   https://firebase.google.com/docs/web/setup#config-web-app -->
+   <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-database.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyBrhpCrlkPOcqKdKDKBLh-SGrnBjlt0DJk",
+        authDomain: "sac-dm-som-f2846.firebaseapp.com",
+        databaseURL: "https://sac-dm-som-f2846.firebaseio.com",
+        projectId: "sac-dm-som-f2846",
+        storageBucket: "sac-dm-som-f2846.appspot.com",
+        messagingSenderId: "316515852835",
+        appId: "1:316515852835:web:6f8437a4885961687d4796",
+        measurementId: "G-BLX31TMXHW"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+
+      firebase.database.Reference
+      var valor_Ref = firebase.database().ref('valor');
+      
+      var razao_Ref = firebase.database().ref('razao');
+      
+      var media_Ref = firebase.database().ref('media');
+
+      var numeroDePico_Ref = firebase.database().ref('numero de pico');
+
+      var alarme_Ref = firebase.database().ref('alarme');
+     
+      var valor;
+
+      var razao;
+      
+      var numeroDePico;
+      
+      var media;
+
+      var alarme;
+      
+      valor_Ref.on('value', function(snapshot){
+        valor = snapshot.val();
+        document.getElementById("valor").innerHTML = valor;})
+
+      razao_Ref.on('value', function(snapshot){
+        razao = snapshot.val();
+        document.getElementById("razao").innerHTML = razao;})
+      
+      numeroDePico_Ref.on('value', function(snapshot){
+        numeroDePico = snapshot.val();
+        document.getElementById("numero de pico").innerHTML = numeroDePico;})
+
+      media_Ref.on('value', function(snapshot){
+        media = snapshot.val();
+        console.log(media);
+        document.getElementById("media").innerHTML = media;})
+
+      alarme_Ref.on('value', function(snapshot){
+        alarme = snapshot.val();
+        console.log(alarme);
+        document.getElementById("alarme").innerHTML = alarme;})
+      
+      
+/*
+      flag_x_Ref.on('value', function(snapshot){
+        flag_x = snapshot.val();
+        if(flag_x) document.getElementById("table_x").style.color = "green";
+        else document.getElementById("table_x").style.color = "red";
+      })
+
+      flag_y_Ref.on('value', function(snapshot){
+        flag_y = snapshot.val();
+        if(flag_y) document.getElementById("table_y").style.color = "green";
+        else document.getElementById("table_y").style.color = "red";
+      })
+
+      flag_z_Ref.on('value', function(snapshot){
+        flag_z = snapshot.val();
+        if(flag_z) document.getElementById("table_z").style.color = "green";
+        else document.getElementById("table_z").style.color = "red";
+      })
+
+      */
+      
+      
+      
+        window.onload = function () {
+
+          var dps = []; // dataPoints
+          var dps1 = [];
+          var dps2 = [];
+          var chart = new CanvasJS.Chart("chartContainer", {
+            animationEnabled: true,
+            title :{
+              text: "razao de picos por amostras"
+            },
+            axisX: {
+              valueFormatString: "###"
+            },
+            axisY: {
+              title: "razao de picos",
+              includeZero: true
+            },
+            toolTip:{
+              shared: true
+            },      
+            data: [{
+              name: "razao",
+              type: "spline",
+              showInLegend: true,
+		          dataPoints: dps
+            }
+            ]
+
+          });
+
+          var xVal = 0;
+          var yValx; 
+          var yValy;
+          var yValz;
+          var updateInterval = 100;
+          var dataLength = 20; // number of dataPoints visible at any point
+
+          var updateChart = function (count) {
+
+            count = count || 1;
+
+            for (var j = 0; j < count; j++) {
+              yValx = razao; 
+              dps.push({
+                x: xVal,
+                y: yValx
+              });
+              xVal++;
+            }
+
+            if (dps.length > dataLength) {
+              dps.shift();
+            }
+
+            chart.render();
+          };
+
+          updateChart(dataLength);
+          setInterval(function(){updateChart()}, updateInterval);
+
+
+          
+
+        }
+
+      
+    </script>
+  <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>  
+  </body>
+</html>
