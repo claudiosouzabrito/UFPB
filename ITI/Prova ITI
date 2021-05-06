@@ -1,14 +1,20 @@
-<mxfile host="app.diagrams.net" modified="2021-05-06T13:55:01.995Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36" etag="qfkMAPhvo9SAoYkW2JZf" version="14.6.10" type="github">
+<mxfile host="app.diagrams.net" modified="2021-05-06T14:05:12.989Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36" etag="YCGhqmUpF6lDI8Bc7ciJ" version="14.6.10" type="github">
   <diagram id="kKpiqKwPvyIVjHNfYLJE" name="Page-1">
     <mxGraphModel dx="4730" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="_ZiYUoasw4UpAqCGEwus-131" value="" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontSize=21;" vertex="1" parent="1">
+          <mxGeometry x="880" y="120" width="560" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="_ZiYUoasw4UpAqCGEwus-129" value="" style="whiteSpace=wrap;html=1;aspect=fixed;labelBackgroundColor=none;fontSize=21;" vertex="1" parent="1">
+          <mxGeometry x="20" y="120" width="850" height="850" as="geometry" />
+        </mxCell>
         <mxCell id="_ZiYUoasw4UpAqCGEwus-1" value="ITI Prova1-Claudio de Souza Brito&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=27;labelBackgroundColor=none;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="140" y="50" width="460" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="_ZiYUoasw4UpAqCGEwus-2" value="1-" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=27;" vertex="1" parent="1">
-          <mxGeometry x="35" y="130" width="40" height="40" as="geometry" />
+        <mxCell id="_ZiYUoasw4UpAqCGEwus-2" value="1-a)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=27;" vertex="1" parent="1">
+          <mxGeometry x="25" y="130" width="60" height="40" as="geometry" />
         </mxCell>
         <mxCell id="_ZiYUoasw4UpAqCGEwus-3" value="M = MACACA, A = {A,C,M}" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=27;" vertex="1" parent="1">
           <mxGeometry x="100" y="170" width="340" height="40" as="geometry" />
@@ -270,6 +276,15 @@
         </mxCell>
         <mxCell id="_ZiYUoasw4UpAqCGEwus-126" value="-" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=21;" vertex="1" parent="1">
           <mxGeometry x="476" y="835" width="20" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_ZiYUoasw4UpAqCGEwus-128" value="b)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=27;" vertex="1" parent="1">
+          <mxGeometry x="880" y="130" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="_ZiYUoasw4UpAqCGEwus-130" value="Entropia = (2,585 + 0,737 + 1 + 0,585 + 1) / 6 = 0,9845&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=21;" vertex="1" parent="1">
+          <mxGeometry x="910" y="170" width="530" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_ZiYUoasw4UpAqCGEwus-132" value="c)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=27;" vertex="1" parent="1">
+          <mxGeometry x="880" y="220" width="40" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
