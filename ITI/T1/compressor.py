@@ -47,8 +47,16 @@ while indice < len(codificacao):
         next += 1
     indice += len(dicionario[bigKey])
 
-
-print(fim)
+#ISSO AQUI EH SO PRINT
+print('dicionario pos 255:')
+listadict = []
+for i in dicionario.keys():
+    if int(i) >= 256:
+        listadict.append(i)
+listadict.sort()
+for i in listadict:
+    print('%s -> %s' %(i, ','.join(map(str,dicionario[i]))))
+print('mensagem final: %s' % fim)
     
 
 
