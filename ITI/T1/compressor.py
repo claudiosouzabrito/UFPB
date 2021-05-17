@@ -10,7 +10,7 @@ def fileToBinaryText(path):
     #file2 = unicodedata.normalize('NFKD', file).encode('ascii','ignore').decode('utf-8')
     return ' '.join(format(ord(i), 'd') for i in file).split() #alterar 08b
 
-codificacao = fileToBinaryText("Disco Rígido Funcionando aberto.mp4")
+codificacao = fileToBinaryText("input.txt")
 #print(codificacao)
 
 for K in range(9,17):
@@ -107,3 +107,5 @@ for K in range(9,17):
         print('K = 16')
         print('tamanho %d -> %d' % (len(codificacao),tamanhoK16))
         print('tempo de %f horas' %tempo)
+        
+    K += 1 
