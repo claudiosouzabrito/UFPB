@@ -1,2 +1,0 @@
-#BOM DIA DERZU
-
