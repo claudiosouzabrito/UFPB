@@ -1,0 +1,475 @@
+MPASM 5.77  /HOME/CLOUD/MPLABXPROJECTS/AULA1   3-15-2022  12:18:20         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00001 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                      00002 ;*              MODIFICAÇÕES PARA USO COM 12F675                   *
+                      00003 ;*                FEITAS PELO PROF. MARDSON                        *
+                      00004 ;*                      MARÇO DE 2021                              *
+                      00005 ;*                 BASEADO NO EXEMPLO DO LIVRO                     *
+                      00006 ;*           Desbravando o PIC. David José de Souza                *
+                      00007 ;*-----------------------------------------------------------------*
+                      00008 ;*   MODELO PARA O PIC 12F675                                      *
+                      00009 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                      00010 
+                      00011 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                      00012 ;*                     ARQUIVOS DE DEFINIÇÕES                      *
+                      00013 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                      00014 #INCLUDE <p12f675.inc>  ;ARQUIVO PADRÃO MICROCHIP PARA 12F675
+                      00001         LIST
+                      00002 
+                      00003 ;==========================================================================
+                      00004 ; Build date : Nov 22 2017
+                      00005 ;  MPASM PIC12F675 processor include
+                      00006 ; 
+                      00007 ;  (c) Copyright 1999-2017 Microchip Technology, All rights reserved
+                      00008 ;==========================================================================
+                      00009 
+                      00367         LIST
+                      00015 
+2007   3FA4           00016         __CONFIG _BODEN_OFF & _CP_OFF & _PWRTE_ON & _WDT_OFF & _MCLRE_ON & _INTRC_OSC_NOCLKOUT
+                      00017 
+                      00018 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                      00019 ;*                    PAGINAÇÃO DE MEMÓRIA                         *
+                      00020 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                      00021 ;DEFINIÇÃO DE COMANDOS DE USUÁRIO PARA ALTERAÇÃO DA PÁGINA DE MEMÓRIA
+                      00022 #DEFINE BANK0   BCF STATUS,RP0  ;SETA BANK 0 DE MEMÓRIA
+                      00023 #DEFINE BANK1   BSF STATUS,RP0  ;SETA BANK 1 DE MAMÓRIA
+                      00024 
+                      00025 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                      00026 ;*                         VARIÁVEIS                               *
+                      00027 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                      00028 ; DEFINIÇÃO DOS NOMES E ENDEREÇOS DE TODAS AS VARIÁVEIS UTILIZADAS 
+                      00029 ; PELO SISTEMA
+                      00030 
+                      00031         CBLOCK  0x20    ;ENDEREÇO INICIAL DA MEMÓRIA DE
+                      00032                                         ;USUÁRIO
+  00000020            00033                 W_TEMP          ;REGISTRADORES TEMPORÁRIOS PARA USO
+  00000021            00034                 STATUS_TEMP     ;JUNTO ÀS INTERRUPÇÕES
+                      00035                 
+                      00036                 ;COLOQUE AQUI SUAS NOVAS VARIÁVEIS
+                      00037                 ;NÃO ESQUEÇA COMENTÁRIOS ESCLARECEDORES
+                      00038                 
+  00000022            00039                 BB
+                      00040                 ;AULA 1A ONLY;
+                      00041 ;               AA
+                      00042 ;               AUX
+                      00043                 ;;;;;;;;;;;;;;;;;;
+MPASM 5.77  /HOME/CLOUD/MPLABXPROJECTS/AULA1   3-15-2022  12:18:20         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00044 ;               AULA 1B ONLY;
+  00000023            00045                 X
+  00000024            00046                 Y
+                      00047                 ;;;;;;;;;;;;;;;;;;;
+                      00048 
+                      00049         ENDC                    ;FIM DO BLOCO DE DEFINIÇÃO DE VARIÁVEIS
+                      00050 
+                      00051 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                      00052 ;*                        FLAGS INTERNOS                           *
+                      00053 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                      00054 ; DEFINIÇÃO DE TODOS OS FLAGS UTILIZADOS PELO SISTEMA
+                      00055 
+                      00056 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                      00057 ;*                         CONSTANTES                              *
+                      00058 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                      00059 ; DEFINIÇÃO DE TODAS AS CONSTANTES UTILIZADAS PELO SISTEMA
+                      00060 
+                      00061 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                      00062 ;*                           ENTRADAS                              *
+                      00063 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                      00064 ; DEFINIÇÃO DE TODOS OS PINOS QUE SERÃO UTILIZADOS COMO ENTRADA
+                      00065 ; RECOMENDAMOS TAMBÉM COMENTAR O SIGNIFICADO DE SEUS ESTADOS (0 E 1)
+                      00066 
+                      00067 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                      00068 ;*                           SAÍDAS                                *
+                      00069 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                      00070 ; DEFINIÇÃO DE TODOS OS PINOS QUE SERÃO UTILIZADOS COMO SAÍDA
+                      00071 ; RECOMENDAMOS TAMBÉM COMENTAR O SIGNIFICADO DE SEUS ESTADOS (0 E 1)
+                      00072 
+                      00073 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                      00074 ;*                       VETOR DE RESET                            *
+                      00075 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                      00076 
+0000                  00077         ORG     0x00                    ;ENDEREÇO INICIAL DE PROCESSAMENTO
+0000   280D           00078         GOTO    INICIO
+                      00079         
+                      00080 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                      00081 ;*                    INÍCIO DA INTERRUPÇÃO                        *
+                      00082 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                      00083 ; ENDEREÇO DE DESVIO DAS INTERRUPÇÕES. A PRIMEIRA TAREFA É SALVAR OS
+                      00084 ; VALORES DE "W" E "STATUS" PARA RECUPERAÇÃO FUTURA
+                      00085 
+0004                  00086         ORG     0x04                    ;ENDEREÇO INICIAL DA INTERRUPÇÃO
+0004   00A0           00087         MOVWF   W_TEMP          ;COPIA W PARA W_TEMP
+0005   0E03           00088         SWAPF   STATUS,W
+0006   00A1           00089         MOVWF   STATUS_TEMP     ;COPIA STATUS PARA STATUS_TEMP
+                      00090 
+                      00091 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                      00092 ;*                    ROTINA DE INTERRUPÇÃO                        *
+                      00093 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                      00094 ; AQUI SERÃO ESCRITAS AS ROTINAS DE RECONHECIMENTO E TRATAMENTO DAS
+                      00095 ; INTERRUPÇÕES
+                      00096 
+MPASM 5.77  /HOME/CLOUD/MPLABXPROJECTS/AULA1   3-15-2022  12:18:20         PAGE  3
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00097 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                      00098 ;*                 ROTINA DE SAÍDA DA INTERRUPÇÃO                  *
+                      00099 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                      00100 ; OS VALORES DE "W" E "STATUS" DEVEM SER RECUPERADOS ANTES DE 
+                      00101 ; RETORNAR DA INTERRUPÇÃO
+                      00102 
+0007                  00103 SAI_INT
+0007   0E21           00104         SWAPF   STATUS_TEMP,W
+0008   0083           00105         MOVWF   STATUS          ;MOVE STATUS_TEMP PARA STATUS
+0009   0EA0           00106         SWAPF   W_TEMP,F
+000A   0E20           00107         SWAPF   W_TEMP,W        ;MOVE W_TEMP PARA W
+000B   0009           00108         RETFIE
+                      00109 
+                      00110 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                      00111 ;*                       ROTINAS E SUBROTINAS                      *
+                      00112 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                      00113 ; CADA ROTINA OU SUBROTINA DEVE POSSUIR A DESCRIÇÃO DE FUNCIONAMENTO
+                      00114 ; E UM NOME COERENTE ÀS SUAS FUNÇÕES.
+                      00115 
+000C                  00116 SUBROTINA1
+                      00117 
+                      00118         ;CORPO DA ROTINA
+                      00119 
+000C   0008           00120         RETURN
+                      00121 
+                      00122 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                      00123 ;*                     INICIO DO PROGRAMA                          *
+                      00124 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                      00125         
+000D                  00126 INICIO
+000D   1683           00127         BANK1                           ;ALTERA PARA O BANCO 1
+000E   3000           00128         MOVLW   B'00000000' ;CONFIGURA TODAS AS PORTAS DO GPIO (PINOS)
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+000F   0085           00129         MOVWF   TRISIO          ;COMO SAÍDAS
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0010   019F           00130         CLRF    ANSEL           ;DEFINE PORTAS COMO Digital I/O
+0011   3004           00131         MOVLW   B'00000100'
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0012   0081           00132         MOVWF   OPTION_REG      ;DEFINE OPÇÕES DE OPERAÇÃO
+0013   3000           00133         MOVLW   B'00000000'
+0014   008B           00134         MOVWF   INTCON          ;DEFINE OPÇÕES DE INTERRUPÇÕES
+0015   1283           00135         BANK0                           ;RETORNA PARA O BANCO
+0016   3007           00136         MOVLW   B'00000111'
+0017   0099           00137         MOVWF   CMCON           ;DEFINE O MODO DE OPERAÇÃO DO COMPARADOR ANALÓGICO
+                      00138 
+                      00139 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                      00140 ;*                     INICIALIZAÇÃO DAS VARIÁVEIS                 *
+                      00141 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                      00142 
+                      00143 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                      00144 ;*                     ROTINA PRINCIPAL                            *
+                      00145 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+0018                  00146 MAIN
+MPASM 5.77  /HOME/CLOUD/MPLABXPROJECTS/AULA1   3-15-2022  12:18:20         PAGE  4
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00147 
+                      00148         ;AULA 1A
+                      00149         
+                      00150 ;       MOVLW .10
+                      00151 ;       MOVWF AA
+                      00152 ;       MOVLW .23
+                      00153 ;       MOVWF BB
+                      00154 ;       MOVFW AA
+                      00155 ;       MOVWF AUX
+                      00156 ;       MOVFW BB
+                      00157 ;       MOVWF AA
+                      00158 ;       MOVFW AUX
+                      00159 ;       MOVWF BB
+                      00160         
+                      00161 ;       AULA 1B
+0018   0103           00162         CLRW
+0019   0223           00163         SUBWF X,W
+001A   1903           00164         BTFSC STATUS, Z
+001B   281D           00165         GOTO ZERO
+001C   2820           00166         GOTO NAO_ZERO
+001D                  00167 ZERO
+001D   3003           00168         MOVLW .3
+001E   00A3           00169         MOVWF X
+001F   2822           00170         GOTO B12
+0020                  00171 NAO_ZERO
+0020   3007           00172         MOVLW .7
+0021   00A4           00173         MOVWF Y
+0022                  00174 B12
+0022   300C           00175         MOVLW .12
+0023   00A2           00176         MOVWF BB
+                      00177 
+0024                  00178 FIM
+                      00179 
+0024   2824           00180         GOTO FIM
+                      00181 
+                      00182 
+                      00183 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                      00184 ;*                       FIM DO PROGRAMA                           *
+                      00185 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+                      00186 
+                      00187         END
+MPASM 5.77  /HOME/CLOUD/MPLABXPROJECTS/AULA1   3-15-2022  12:18:20         PAGE  5
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+ADCON0                            0000001F
+ADCS0                             00000004
+ADCS1                             00000005
+ADCS2                             00000006
+ADFM                              00000007
+ADIE                              00000006
+ADIF                              00000006
+ADON                              00000000
+ADRESH                            0000001E
+ADRESL                            0000009E
+ANS0                              00000000
+ANS1                              00000001
+ANS2                              00000002
+ANS3                              00000003
+ANSEL                             0000009F
+B12                               00000022
+BANK0                             BCF STATUS,RP0
+BANK1                             BSF STATUS,RP0
+BB                                00000022
+C                                 00000000
+CAL0                              00000002
+CAL1                              00000003
+CAL2                              00000004
+CAL3                              00000005
+CAL4                              00000006
+CAL5                              00000007
+CHS0                              00000002
+CHS1                              00000003
+CINV                              00000004
+CIS                               00000003
+CM0                               00000000
+CM1                               00000001
+CM2                               00000002
+CMCON                             00000019
+CMIE                              00000003
+CMIF                              00000003
+COUT                              00000006
+DC                                00000001
+EEADR                             0000009B
+EECON1                            0000009C
+EECON2                            0000009D
+EEDAT                             0000009A
+EEDATA                            0000009A
+EEIE                              00000007
+EEIF                              00000007
+F                                 00000001
+FIM                               00000024
+FSR                               00000004
+GIE                               00000007
+GO                                00000001
+GO_DONE                           00000001
+GO_NOT_DONE                       00000001
+GP0                               00000000
+MPASM 5.77  /HOME/CLOUD/MPLABXPROJECTS/AULA1   3-15-2022  12:18:20         PAGE  6
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+GP1                               00000001
+GP2                               00000002
+GP3                               00000003
+GP4                               00000004
+GP5                               00000005
+GPIE                              00000003
+GPIF                              00000000
+GPIO                              00000005
+GPIO0                             00000000
+GPIO1                             00000001
+GPIO2                             00000002
+GPIO3                             00000003
+GPIO4                             00000004
+GPIO5                             00000005
+INDF                              00000000
+INICIO                            0000000D
+INTCON                            0000000B
+INTE                              00000004
+INTEDG                            00000006
+INTF                              00000001
+IOC                               00000096
+IOC0                              00000000
+IOC1                              00000001
+IOC2                              00000002
+IOC3                              00000003
+IOC4                              00000004
+IOC5                              00000005
+IOCB                              00000096
+IOCB0                             00000000
+IOCB1                             00000001
+IOCB2                             00000002
+IOCB3                             00000003
+IOCB4                             00000004
+IOCB5                             00000005
+IRP                               00000007
+MAIN                              00000018
+NAO_ZERO                          00000020
+NOT_BOD                           00000000
+NOT_BOR                           00000000
+NOT_DONE                          00000001
+NOT_GPPU                          00000007
+NOT_PD                            00000003
+NOT_POR                           00000001
+NOT_T1SYNC                        00000002
+NOT_TO                            00000004
+OPTION_REG                        00000081
+OSCCAL                            00000090
+PCL                               00000002
+PCLATH                            0000000A
+PCON                              0000008E
+PEIE                              00000006
+PIE1                              0000008C
+PIR1                              0000000C
+MPASM 5.77  /HOME/CLOUD/MPLABXPROJECTS/AULA1   3-15-2022  12:18:20         PAGE  7
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+PS0                               00000000
+PS1                               00000001
+PS2                               00000002
+PSA                               00000003
+RD                                00000000
+RP0                               00000005
+RP1                               00000006
+SAI_INT                           00000007
+STATUS                            00000003
+STATUS_TEMP                       00000021
+SUBROTINA1                        0000000C
+T0CS                              00000005
+T0IE                              00000005
+T0IF                              00000002
+T0SE                              00000004
+T1CKPS0                           00000004
+T1CKPS1                           00000005
+T1CON                             00000010
+T1IE                              00000000
+T1IF                              00000000
+T1OSCEN                           00000003
+TMR0                              00000001
+TMR0IE                            00000005
+TMR0IF                            00000002
+TMR1                              0000000E
+TMR1CS                            00000001
+TMR1GE                            00000006
+TMR1H                             0000000F
+TMR1IE                            00000000
+TMR1IF                            00000000
+TMR1L                             0000000E
+TMR1ON                            00000000
+TRISIO                            00000085
+TRISIO0                           00000000
+TRISIO1                           00000001
+TRISIO2                           00000002
+TRISIO3                           00000003
+TRISIO4                           00000004
+TRISIO5                           00000005
+VCFG                              00000006
+VR0                               00000000
+VR1                               00000001
+VR2                               00000002
+VR3                               00000003
+VRCON                             00000099
+VREN                              00000007
+VRR                               00000005
+W                                 00000000
+WPU                               00000095
+WPU0                              00000000
+WPU1                              00000001
+WPU2                              00000002
+WPU4                              00000004
+MPASM 5.77  /HOME/CLOUD/MPLABXPROJECTS/AULA1   3-15-2022  12:18:20         PAGE  8
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+WPU5                              00000005
+WR                                00000001
+WREN                              00000002
+WRERR                             00000003
+W_TEMP                            00000020
+X                                 00000023
+Y                                 00000024
+Z                                 00000002
+ZERO                              0000001D
+_BODEN_OFF                        00003FBF
+_BODEN_ON                         00003FFF
+_BOREN_OFF                        00003FBF
+_BOREN_ON                         00003FFF
+_CONFIG                           00002007
+_CPD_OFF                          00003FFF
+_CPD_ON                           00003EFF
+_CP_OFF                           00003FFF
+_CP_ON                            00003F7F
+_DEVID1                           00002006
+_EC_OSC                           00003FFB
+_EXTRC_OSC_CLKOUT                 00003FFF
+_EXTRC_OSC_NOCLKOUT               00003FFE
+_FOSC_EC                          00003FFB
+_FOSC_EXTRCCLK                    00003FFF
+_FOSC_EXTRCIO                     00003FFE
+_FOSC_HS                          00003FFA
+_FOSC_INTRCCLK                    00003FFD
+_FOSC_INTRCIO                     00003FFC
+_FOSC_LP                          00003FF8
+_FOSC_XT                          00003FF9
+_HS_OSC                           00003FFA
+_IDLOC0                           00002000
+_IDLOC1                           00002001
+_IDLOC2                           00002002
+_IDLOC3                           00002003
+_INTRC_OSC_CLKOUT                 00003FFD
+_INTRC_OSC_NOCLKOUT               00003FFC
+_LP_OSC                           00003FF8
+_MCLRE_OFF                        00003FDF
+_MCLRE_ON                         00003FFF
+_PWRTE_OFF                        00003FFF
+_PWRTE_ON                         00003FEF
+_WDTE_OFF                         00003FF7
+_WDTE_ON                          00003FFF
+_WDT_OFF                          00003FF7
+_WDT_ON                           00003FFF
+_XT_OSC                           00003FF9
+__12F675                          00000001
+MPASM 5.77  /HOME/CLOUD/MPLABXPROJECTS/AULA1   3-15-2022  12:18:20         PAGE  9
+
+
+MEMORY USAGE MAP ('X' = Used,  '-' = Unused)
+
+
+0000 : X---XXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXX----------- ----------------
+2000 : -------X-------- ---------------- ---------------- ----------------
+
+All other memory blocks unused.
+
+Program Memory Words Used:    34
+Program Memory Words Free:   990
+
+
+Errors   :     0
+Warnings :     0 reported,     0 suppressed
+Messages :     3 reported,     0 suppressed
+
+
